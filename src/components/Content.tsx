@@ -7,7 +7,6 @@ interface ContentProps {
 }
 
 export function Content({ genere, data }: ContentProps) {
-  // Complete aqui
   return (
     <div className="container">
       <header>
