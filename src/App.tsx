@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { MovieCard } from "./components/MovieCard";
 
 import { SideBar } from "./components/SideBar";
-import { Content } from './components/Content';
+import { Content } from "./components/Content";
 
 import { api } from "./services/api";
 
@@ -39,7 +39,6 @@ export function App() {
     {} as GenreResponseProps
   );
 
-
   function handleClickButton(id: number) {
     setSelectedGenreId(id);
   }
@@ -66,10 +65,13 @@ export function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
-     
-     <SideBar data={genres} selectId={selectedGenreId} clickEvent={handleClickButton}/>
+      <SideBar
+        data={genres}
+        selectId={selectedGenreId}
+        clickEvent={handleClickButton}
+      />
 
-    <Content genere={selectedGenre} data={movies}/>
+      <Content genere={selectedGenre} data={movies} />
     </div>
   );
 }
