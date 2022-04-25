@@ -1,10 +1,5 @@
+import { GenreResponseProps } from "../App";
 import { Button } from "./Button";
-
-interface GenreResponseProps {
-  id: number;
-  name: "action" | "comedy" | "documentary" | "drama" | "horror" | "family";
-  title: string;
-}
 
 interface DataProps {
   data: GenreResponseProps[];
